@@ -1,16 +1,14 @@
 import React from 'react';
 import Todos from './Todos';
 
-const Todo = () => {
-    const todo=localStorage.getItem('AddTodo');
-    const todoItems=JSON.parse(todo);
+const Todo = (props) => {
+  
+  
     
     return (
         <div>
-          <h3>yhsoi os todo</h3>
-          {
-            todoItems.map(item=><Todos todo={item}></Todos>)
-          }
+          <h3 className='text-center text-2xl'>All Todo List</h3>
+      <Todos todo={props.todo[1]}></Todos>
         </div>
     );
 };
